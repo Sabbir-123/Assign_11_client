@@ -31,6 +31,11 @@ const Footer = () => {
 				<a rel="noopener noreferrer" href="#">Twitter</a>
 			</li>
 		</ul>
+        <hr />
+        <div>
+            <h1>Copyright @2022</h1>
+            <h2>All Rights Reserved @MD_SABBIR_AHMED  </h2>
+        </div>
 	</div>
 </footer>
         </div>
