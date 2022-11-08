@@ -15,8 +15,8 @@ const SliderItem = ({slide}) => {
                         in One Place
                     </h1>
                 </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 top-1/2  md:hidden sm:hidden lg:block  ">
-                    <p  className='lg:text-5xl sm:text-2xl md:text-3xl text-white'>Parcel Delivered <br /> On Time with no Hassle</p>
+                <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-20 top-1/2  md:hidden sm:hidden lg:block  ">
+                    <p  className='lg:text-5xl sm:text-xl md:text-3xl text-white md:hidden sm:hidden lg:block '>Parcel Delivered <br /> On Time with <br /> no Hassle</p>
                 </div>
                 <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
                     <Link to={'/login'}>
@@ -27,8 +27,8 @@ const SliderItem = ({slide}) => {
                     </Link>
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-10 right-15 bottom-0">
-                    <a href={`#slide${prev}`} className="btn btn-circle bg-gray-600 mr-5">❮</a>
-                    <a href={`#slide${next}`} className="btn btn-circle bg-gray-600">❯</a>
+                    <a href={`#slide${prev}`} className="btn btn-circle border-none bg-gray-600 mr-5">❮❮</a>
+                    <a href={`#slide${next}`} className="btn btn-circle border-none bg-gray-600">❯❯</a>
                 </div>
             </div>
     );

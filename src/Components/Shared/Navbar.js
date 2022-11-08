@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
+import logo from '../../Assets/logo.png'
+import { AuthContext } from '../../Constexts/AuthpProvider';
 
 const Navbar = () => {
 
-    const menuItems = <>
+    const { user, logout } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logout()
+          .then(swal("User Logged Out"))
+          .catch((error) => swal(error.message));
+      };
+
+    const menuItems = 
+    <>
     <li className='font-semibold'><Link to='/'>Home</Link></li>
-    <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
-    <li className='font-semibold'><Link to='/login'>Login</Link></li>
-    {/* {
+    {
         user?.email ? 
         <>
-        <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
+        <li className='font-semibold'><Link to='/services'>Services</Link></li>
+        <li className='font-semibold' onClick={handleLogout}><Link >Log Out</Link></li>
         </>
         :
+       <>
+        <li className='font-semibold'><Link to='/register'>Register</Link></li>
         <li className='font-semibold'><Link to='/login'>Login</Link></li>
-    } */}
+       </>
+    }
+
+<li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
 </>
     return (
-        <div className="navbar h-20 mb-12 pt-12 bg-base-100">
+        <div className="navbar pt-2 pb-4 bg-base-100">
         <div className="navbar-start">
             <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,7 +44,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <Link to="/" className="btn btn-ghost normal-case text-xl">
-                {/* <img src={logo} alt="" /> */}
+                <img className='w-12 h-10 rounded' src={logo} alt="" />
             </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -37,7 +53,13 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <button className="btn btn-outline btn-warning">Appointment</button>
+           <ul>
+           <li>
+            
+           <img src={user?.photoURL} className="rounded h-12 image" alt="" />
+           <p>{user?.displayName}</p>
+           </li>
+           </ul>
         </div>
     </div>
     );
