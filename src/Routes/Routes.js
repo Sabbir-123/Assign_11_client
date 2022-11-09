@@ -1,3 +1,6 @@
+import CardDetails from "../Components/Home/Services/CardDetails";
+import Services from "../Components/Home/Services/Services";
+
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Blogs } = require("../Components/Blogs/Blogs");
 const { default: Home } = require("../Components/Home/Home/Home");
@@ -27,6 +30,15 @@ const router = createBrowserRouter ([
             {
                 path:'/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path:'/services',
+                element: <Services></Services>,
+            },
+            {
+                path:'/services/:id',
+                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+                element: <CardDetails></CardDetails>,
             }
         ]
     }

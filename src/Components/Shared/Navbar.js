@@ -33,7 +33,7 @@ const Navbar = () => {
 <li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
 </>
     return (
-        <div className="navbar pt-2 pb-4 bg-base-100">
+        <div className="navbar pt-2 pb-4 bg-gray-900">
         <div className="navbar-start">
             <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
