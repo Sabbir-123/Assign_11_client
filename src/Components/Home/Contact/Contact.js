@@ -4,6 +4,9 @@ const Contact = () => {
   return (
     <div className="mt-5 pt-5">
       <section className="py-3 bg-gray-800 text-gray-50">
+        <div className="grid justify-center my-5">
+          <h1 className="text-5xl font-bold">Become a Merchant</h1>
+        </div>
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="py-6 md:py-0 md:px-6">
             <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -24,7 +27,7 @@ const Contact = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span>Fake address, 9999 City</span>
+                <span>9999 City</span>
               </p>
               <p className="flex items-center">
                 <svg
@@ -47,7 +50,7 @@ const Contact = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
-                <span>contact@business.com</span>
+                <span>ahmedsabbir2013@gmail.com</span>
               </p>
             </div>
           </div>

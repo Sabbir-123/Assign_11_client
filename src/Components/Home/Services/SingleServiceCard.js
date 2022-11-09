@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const SingleServiceCard = ({singleService}) => {
     const {_id, category_id , title, price, image, details }= singleService;
     return (
-        <div>
+        <PhotoProvider>
+            <div>
             <div className="flex flex-col dark:bg-gray-900">
 				<Link rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-					<img alt="" className="object-cover w-full h-52 dark:bg-gray-500" src={image}/>
+					<PhotoView src={image}>
+                    <img alt="" className="object-cover w-full h-52 dark:bg-gray-500" src={image}/>
+                    </PhotoView>
 				</Link>
 				<div className="flex flex-col flex-1 p-6">
 					<Link rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></Link>
@@ -18,6 +22,7 @@ const SingleServiceCard = ({singleService}) => {
 				</div>
 			</div>
         </div>
+        </PhotoProvider>
     );
 };
 
