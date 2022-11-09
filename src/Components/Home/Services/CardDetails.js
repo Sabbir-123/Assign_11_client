@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Constexts/AuthpProvider";
+import AddReviews from "../../MyReviews/AddReviews";
+import MyReviews from "../../MyReviews/MyReviews";
 
 const CardDetails = () => {
   const serviceDetails = useLoaderData();
@@ -96,6 +98,15 @@ const CardDetails = () => {
         </div>
       </div>
       <div>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+            <div>
+                  <AddReviews></AddReviews>
+            </div>
+            <div>
+                  <h1>All reviews</h1>
+                  <MyReviews></MyReviews>
+            </div>
+        </div>
         
       </div>
     </div>
