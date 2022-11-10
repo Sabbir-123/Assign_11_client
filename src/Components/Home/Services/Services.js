@@ -5,7 +5,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://loserver.vercel.app/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
@@ -19,7 +19,7 @@ const Services = () => {
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
 			{
-                services.map(singleService=> <SingleServiceCard key={singleService.category_id} singleService={singleService}></SingleServiceCard>)
+                services.map(singleService=> <SingleServiceCard key={singleService._id} singleService={singleService}></SingleServiceCard>)
             }
 		</div>
 	</div>

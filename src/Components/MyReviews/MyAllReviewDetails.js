@@ -15,7 +15,7 @@ const MyAllReviewDetails = ({ allreview}) => {
     const confirm = window.confirm('Are you sure you want to Delete?')
    
     if(confirm){
-        fetch(`http://localhost:5000/reviews/${id}`,{
+        fetch(`https://loserver.vercel.app/reviews/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -33,7 +33,7 @@ const MyAllReviewDetails = ({ allreview}) => {
 
 
   const handleUpdate = id => {
-    fetch(`http://localhost:5000/reviews/${id}`, {
+    fetch(`https://loserver.vercel.app/reviews/${id}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json',

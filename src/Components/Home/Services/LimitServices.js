@@ -6,7 +6,7 @@ const LimitServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/servicelimit")
+    fetch("https://loserver.vercel.app/servicelimit")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -29,9 +29,11 @@ const LimitServices = () => {
             ))}
           </div>
         </div>
-       <div className="grid justify-center">
-       <Link to={'/services'}><button className="btn btn-secondary">See All</button></Link>
-       </div>
+        <div className="grid justify-center">
+          <Link to={"/services"}>
+            <button className="btn btn-secondary">See All</button>
+          </Link>
+        </div>
       </section>
     </div>
   );

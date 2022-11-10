@@ -11,7 +11,7 @@ const AddService = () => {
 		  details: e.target.details.value,
 		};
 	
-		fetch("http://localhost:5000/addservices", {
+		fetch("https://loserver.vercel.app/addservices", {
 		  method: "POST",
 		  headers: {
 			"content-type": "application/json"

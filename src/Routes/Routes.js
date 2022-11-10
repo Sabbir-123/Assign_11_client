@@ -33,7 +33,8 @@ const router = createBrowserRouter ([
             },
             {
                 path:'/blogs',
-                element: <Blogs></Blogs>
+                element: <Blogs></Blogs>,
+                loader: ()=>fetch('https://loserver.vercel.app/blogs')
             },
             {
                 path:'/services',
@@ -41,7 +42,7 @@ const router = createBrowserRouter ([
             },
             {
                 path:'/services/:id',
-                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params})=>fetch(`https://loserver.vercel.app/services/${params.id}`),
                 element: <CardDetails></CardDetails>,
             },
             {
@@ -55,7 +56,7 @@ const router = createBrowserRouter ([
             {
                 path:'/update/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({params})=>fetch(`https://loserver.vercel.app/sreviews/${params.id}`)
             }
         ]
     }

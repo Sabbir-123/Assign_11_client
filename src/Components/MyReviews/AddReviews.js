@@ -16,7 +16,7 @@ const AddReviews = ({serviceDetails}) => {
       reviewerImage,
     };
 
-    fetch("http://localhost:5000/addreviews", {
+    fetch("https://loserver.vercel.app/addreviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
