@@ -5,7 +5,7 @@ import Loader from '../Shared/Loader';
 
 
 
-
+// PrivateRoute
 
 const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
