@@ -4,6 +4,7 @@ import Services from "../Components/Home/Services/Services";
 import MyAllReview from "../Components/MyReviews/MyAllReview";
 import MyReviews from "../Components/MyReviews/MyReviews";
 import UpdateReview from "../Components/MyReviews/UpdateReview";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Blogs } = require("../Components/Blogs/Blogs");
@@ -51,7 +52,7 @@ const router = createBrowserRouter ([
             },
             {
                 path:'/myallreviews',
-                element: <MyAllReview></MyAllReview>,
+                element: <PrivateRoute><MyAllReview></MyAllReview></PrivateRoute>,
             },
             {
                 path:'/update/:id',
