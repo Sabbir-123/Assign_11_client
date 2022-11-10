@@ -3,12 +3,15 @@ import { AuthContext } from "../../Constexts/AuthpProvider";
 import Reviews from "./Reviews";
 
 const MyReviews = () => {
+    const {user }= useContext(AuthContext)
 const [reviews, setReviews] = useState([]);
 
 useEffect(()=>{
-    fetch('http://localhost:5000/reviews')
+    fetch(`http://localhost:5000/reviews`)
     .then(res => res.json())
-    .then(data => setReviews(data))
+.then(data => {setReviews(data)
+})
+    
 }, [])
 
 

@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link to="/addservices">Add Services</Link>
           </li>
           <li className="font-semibold">
-            <Link to="/myreviews">My Reviews</Link>
+            <Link to="/myallreviews">My Reviews</Link>
           </li>
           <li className="font-semibold" onClick={handleLogout}>
             <Link>Log Out</Link>

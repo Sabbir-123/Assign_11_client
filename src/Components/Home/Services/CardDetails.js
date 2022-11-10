@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Constexts/AuthpProvider";
 import AddReviews from "../../MyReviews/AddReviews";
 import MyReviews from "../../MyReviews/MyReviews";
@@ -7,11 +7,14 @@ import MyReviews from "../../MyReviews/MyReviews";
 const CardDetails = () => {
   const serviceDetails = useLoaderData();
   const { user } = useContext(AuthContext);
+
+  const [reviews, setReviews] = useState([]);
+  const [count, setCount] = useState(0);
   console.log(user);
   const { image, details, price, _id, title } = serviceDetails;
   return (
     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
-      <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex mx-auto flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
         <div className="flex space-x-4">
           <img
             alt=""
@@ -97,14 +100,25 @@ const CardDetails = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mx-auto">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-            <div>
-                  <AddReviews></AddReviews>
+            <div className="mx-auto">
+                 {user?.displayName ? 
+                 <>
+                  <AddReviews serviceDetails={serviceDetails} ></AddReviews>
+                 </>
+                 :
+                 <>
+                 <h1>Please log in to Add Your Review</h1>
+                 <Link to={'/login'}>
+                 <button className="btn btn-primary"> Log in</button>
+                  </Link>
+                  
+                 </>}
             </div>
-            <div>
+            <div className="mx-auto">
                   <h1>All reviews</h1>
-                  <MyReviews></MyReviews>
+                <MyReviews key={_id} title={title}></MyReviews>
             </div>
         </div>
         

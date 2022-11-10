@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import swal from "sweetalert";
 import { AuthContext } from "../../Constexts/AuthpProvider";
 
-const AddReviews = () => {
+const AddReviews = ({serviceDetails}) => {
   const { user } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,6 +11,7 @@ const AddReviews = () => {
     const review = {
       title: e.target.title.value,
       details: e.target.details.value,
+      serviceID : e.target.serviceID.value,
       reviewUser,
       reviewerImage,
     };
@@ -36,7 +37,7 @@ const AddReviews = () => {
       });
   };
   return (
-    <div>
+    <div className="mr-5">
       <section className="p-6 bg-gray-900 dark:text-gray-50">
         <form
           onSubmit={handleSubmit}
@@ -56,6 +57,21 @@ const AddReviews = () => {
               <input
                 id="title"
                 name="title"
+                type="text"
+                required
+                placeholder="Service Title"
+                className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-gray-100"
+              />
+            </div>
+            <div className="col-span-full sm:col-span-3">
+              <label for="title" className="text-sm">
+                Service ID
+              </label>
+
+              <input
+              defaultValue={serviceDetails._id}
+                id="title"
+                name="serviceID"
                 type="text"
                 required
                 placeholder="Service Title"

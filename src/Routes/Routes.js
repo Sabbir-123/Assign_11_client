@@ -1,7 +1,9 @@
 import AddService from "../Components/AddService/AddService";
 import CardDetails from "../Components/Home/Services/CardDetails";
 import Services from "../Components/Home/Services/Services";
+import MyAllReview from "../Components/MyReviews/MyAllReview";
 import MyReviews from "../Components/MyReviews/MyReviews";
+import UpdateReview from "../Components/MyReviews/UpdateReview";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Blogs } = require("../Components/Blogs/Blogs");
@@ -47,8 +49,13 @@ const router = createBrowserRouter ([
                 element: <AddService></AddService>,
             },
             {
-                path:'/myreviews',
-                element: <MyReviews></MyReviews>,
+                path:'/myallreviews',
+                element: <MyAllReview></MyAllReview>,
+            },
+            {
+                path:'/update',
+                element: <UpdateReview></UpdateReview>,
+                loader: ({params})=>fetch('')
             }
         ]
     }
