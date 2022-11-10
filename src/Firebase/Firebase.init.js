@@ -9,8 +9,15 @@ const firebaseConfig = {
   authDomain: "assignment-11-c4f4f.firebaseapp.com",
   projectId: "assignment-11-c4f4f",
   storageBucket: "assignment-11-c4f4f.appspot.com",
-  messagingSenderId: "357559421744",
+  messagingSenderId: "assignment-11-c4f4f.appspot.com",
   appId: "1:357559421744:web:8dc3e720ae1fdc06e616f5"
+
+  // apiKey: process.env.REACT_APP_apiKey,
+  // authDomain: process.env.REACT_APP_authDomain,
+  // projectId: process.env.REACT_APP_projectId,
+  // storageBucket: process.env.REACT_APP_storageBucket,
+  // messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  // appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

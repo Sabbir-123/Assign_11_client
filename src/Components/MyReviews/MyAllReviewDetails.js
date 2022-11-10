@@ -79,8 +79,8 @@ const MyAllReviewDetails = ({ allreview}) => {
             <button onClick={()=>handleDelete(_id)} className="self-start px-10 py-3 text-lg font-medium rounded-3xl dark:bg-violet-400 dark:text-gray-900">
               Delete
             </button>
-            <Link to={'/update'}>
-            <button onClick={()=>handleUpdate(_id)} className="self-start px-10 py-3 text-lg font-medium rounded-3xl dark:bg-violet-400 dark:text-gray-900">
+            <Link to={'/update/:id'}>
+            <button onClick={()=>handleUpdate(allreview._id)} className="self-start px-10 py-3 text-lg font-medium rounded-3xl dark:bg-violet-400 dark:text-gray-900">
               Update
             </button>
             </Link>
