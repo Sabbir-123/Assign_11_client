@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="mt-5 pt-5">
-      <section className="py-3 bg-gray-800 text-gray-50">
+    <div className=" pt-5">
+      <section className="py-3 violetColor textColor">
         <div className="grid justify-center my-5">
           <h1 className="text-5xl font-bold">Become a Merchant</h1>
         </div>
@@ -83,7 +83,7 @@ const Contact = () => {
             </label>
             <button
               type="button"
-              className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-400 dark:text-gray-900 focus:ring-violet-400 hover:ring-violet-400"
+              className="self-center px-8  text-lg rounded focus:ring hover:ring focus:ring-opacity-75  btn btn-primary  focus:ring-violet-400 hover:ring-violet-400"
             >
               Submit
             </button>

@@ -1,17 +1,16 @@
 import React from "react";
-import Contact from "../Contact/Contact";
 import Feature from "../Feature/Feature";
 import LimitServices from "../Services/LimitServices";
-import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
+import Team from "../Teams/Team";
 
 const Home = () => {
   return (
-    <div>
+    <div className="violetColor">
       <Slider></Slider>
       <LimitServices></LimitServices>
       <Feature></Feature>
-      <Contact></Contact>
+      <Team></Team>
     </div>
   );
 };

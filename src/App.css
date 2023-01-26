@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.primaryColor{
+  color:  #6D2E46 ;
+}
+.backColor{
+  background-color:  #6D2E46 ;
+}
+.ashColor{
+  background-color: #D9D9D9;
+}
+.violetColor{
+  background-color: #100d1c;
+}
+.purple{
+  background-color: #030311;
+}
+.whiteColor{
+  background-color: #E7E6E4;
+}
+.secondaryColor{
+  color: #1E1E1E
+}
+.textColor{
+  color: #ffffff
+}
+

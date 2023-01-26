@@ -6,7 +6,10 @@ import Header from '../Components/Shared/Header';
 const Main = () => {
     return (
         <div>
+            <div className='sticky top-0'>
             <Header></Header>
+            </div>
+            <hr />
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

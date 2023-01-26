@@ -23,6 +23,7 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
+        navigate('/')
         form.reset();
       })
       .catch((error) => console.log(error));
@@ -42,12 +43,12 @@ const Register = () => {
   }
 
     return (
-        <div className="mt-5 login">
+        <div className="p-5 violetColor">
       <div className="flex justify-center items-center ">
-        <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
+        <div className="flex shadow-xl purple textColor shadow-violet-800 flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100  ">
           <div className="mb-8 text-center">
             <h1 className="my-3 text-4xl font-bold">Register</h1>
-            <p className="text-sm text-gray-400">Create a new account</p>
+            <p className="text-sm  ">Create a new account</p>
           </div>
           <form
             onSubmit={handleSubmit}
@@ -65,7 +66,7 @@ const Register = () => {
                   name="name"
                   id="name"
                   placeholder="Enter Your Full Name Here"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900"
+                  className="w-full text-black px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200  "
                   data-temp-mail-org="0"
                 />
               </div>
@@ -78,7 +79,7 @@ const Register = () => {
                   name="photoURL"
                   id="photoURL"
                   placeholder="Enter Your Photo URL"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900"
+                  className="w-full px-3 text-black py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200  "
                   data-temp-mail-org="0"
                 />
               </div>
@@ -91,7 +92,7 @@ const Register = () => {
                   name="email"
                   id="email"
                   placeholder="Enter Your Email Here"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900"
+                  className="w-full text-black px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200  "
                   data-temp-mail-org="0"
                 />
               </div>
@@ -106,7 +107,7 @@ const Register = () => {
                   name="password"
                   id="password"
                   placeholder="*******"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900"
+                  className="w-full text-black px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900  "
                 />
               </div>
             </div>
@@ -122,17 +123,17 @@ const Register = () => {
             </div>
           </form>
           <div className="flex items-center pt-4 space-x-1">
-            <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-            <p className="px-3 text-sm dark:text-gray-400">
+            <div className="flex-1 h-px sm:w-16 "></div>
+            <p className="px-3 text-sm   ">
               Signup with social accounts
             </p>
-            <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+            <div className="flex-1 h-px sm:w-16  "></div>
           </div>
           <div className="flex justify-center space-x-4">
             <button 
             onClick={handleGoogleSignIn}
             aria-label="Log in with Google" 
-            className="p-3 rounded-sm">
+            className="my-2 p-3 border rounded-full shadow-md shadow-slate-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"

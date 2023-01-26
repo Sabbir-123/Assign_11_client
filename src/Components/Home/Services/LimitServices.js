@@ -12,11 +12,11 @@ const LimitServices = () => {
   }, []);
   return (
     <div>
-      <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100">
+      <section className="py-6 sm:py-12   textColor  ">
         <div className="container p-6 mx-auto space-y-8">
           <div className="space-y-2 text-center">
             <h2 className="text-3xl font-bold">Our Services</h2>
-            <p className="font-serif text-sm dark:text-gray-400">
+            <p className="font-serif text-sm   ">
               What We Provide?
             </p>
           </div>

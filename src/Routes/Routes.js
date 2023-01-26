@@ -1,8 +1,8 @@
 import AddService from "../Components/AddService/AddService";
+import Contact from "../Components/Home/Contact/Contact";
 import CardDetails from "../Components/Home/Services/CardDetails";
 import Services from "../Components/Home/Services/Services";
 import MyAllReview from "../Components/MyReviews/MyAllReview";
-import MyReviews from "../Components/MyReviews/MyReviews";
 import UpdateReview from "../Components/MyReviews/UpdateReview";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
@@ -49,6 +49,10 @@ const router = createBrowserRouter ([
             {
                 path:'/addservices',
                 element: <AddService></AddService>,
+            },
+            {
+                path:'/contacts',
+                element: <Contact></Contact>,
             },
             {
                 path:'/myallreviews',

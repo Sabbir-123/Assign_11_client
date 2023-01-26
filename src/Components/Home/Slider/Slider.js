@@ -31,7 +31,7 @@ const sliderImage = [
 
 const Slider = () => {
     return (
-        <div className="carousel py-10 mx-5">
+        <div className="carousel py-10 mx-5  ">
         {
             sliderImage.map(slide => <SliderItem key={slide.id} slide={slide}>
 

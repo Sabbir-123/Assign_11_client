@@ -15,41 +15,44 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <li className="font-semibold">
+      <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
         <Link to="/">Home</Link>
       </li>
       {user?.email ? (
         <>
-          <li className="font-semibold">
+          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/addservices">Add Services</Link>
           </li>
-          <li className="font-semibold">
+          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/myallreviews">My Reviews</Link>
           </li>
-          <li className="font-semibold" onClick={handleLogout}>
+          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl" onClick={handleLogout}>
             <Link>Log Out</Link>
           </li>
         </>
       ) : (
         <>
-          <li className="font-semibold">
+          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/register">Register</Link>
           </li>
-          <li className="font-semibold">
+          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/login">Login</Link>
           </li>
         </>
       )}
 
-      <li className="font-semibold">
+      <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
         <Link to="/blogs">Blogs</Link>
+      </li>
+      <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
+        <Link to="/contacts">Contacts</Link>
       </li>
     </>
   );
   return (
-    <div className="navbar pt-2 pb-4 bg-gray-900">
+    <div className="navbar  pt-2 pb-4 purple textColor">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown ">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,17 +71,18 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu purple menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {menuItems}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="w-12 h-10 rounded" src={logo} alt="" />
+          <h1 className="px-2">Raihan's Delivery</h1>
         </Link>
       </div>
-      <div className="navbar-end">
-        <ul className="menu menu-horizontal hidden lg:flex p-0">{menuItems}</ul>
+      <div className="navbar-end ">
+        <ul className="menu  menu-horizontal hidden lg:flex p-0">{menuItems}</ul>
         <ul>
           <li>
             <img src={user?.photoURL} className="rounded h-12 image ml-6" alt="" />
