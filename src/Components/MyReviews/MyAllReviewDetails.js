@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Constexts/AuthpProvider";
 
 const MyAllReviewDetails = ({ allreview, refetch}) => {
@@ -34,26 +34,9 @@ const MyAllReviewDetails = ({ allreview, refetch}) => {
   }
 
 
-  const handleUpdate = id => {
-    fetch(`https://loserver.vercel.app/reviews/${id}`, {
-        method: 'PATCH',
-        headers: {
-            'content-type': 'application/json',
-        },
-        body: JSON.stringify({ status: 'Approved' })
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if (data.modifiedCount > 0) {
-                const remaining = myReviews.filter(odr => odr._id !== id);
-                const approving = myReviews.find(odr => odr._id === id);
-                approving.status = 'Approved'
-
-                const updatedDoc = [approving, ...remaining];
-                setmyReviews(updatedDoc);
-            }
-        })
+const navigate= useNavigate();
+  const handleUpdate = (id)=> {
+  navigate(`/update/${id}`)
 }
   return (
     <div>

@@ -1,11 +1,17 @@
 import React from 'react';
-
+import './Loadeer.css'
 const Loader = () => {
     return (
-        <div>
-            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin 
-            "></div>
-        </div>
+        <div className="loading-container purple">
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+        <div className="loading-circle"></div>
+      </div>
     );
 };
 

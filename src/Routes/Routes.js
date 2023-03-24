@@ -61,7 +61,7 @@ const router = createBrowserRouter ([
             {
                 path:'/update/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({params})=>fetch(`https://loserver.vercel.app/sreviews/${params.id}`)
+                // loader: ({params})=>fetch(`https://loserver.vercel.app/reviews/${params.id}`)
             }
         ]
     }

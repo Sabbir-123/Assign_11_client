@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" pt-5">
+    <div className="">
       <section className="py-3 violetColor textColor">
         <div className="grid justify-center my-5">
           <h1 className="text-5xl font-bold">Become a Merchant</h1>

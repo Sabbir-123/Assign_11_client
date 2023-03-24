@@ -54,22 +54,22 @@ const Login = () => {
       }
     return (
 <div>
-<div className='flex lg:grid justify-center bg-gray-500 py-5 violetColor'>
-<div className="w-full mx-16 lg:mx-5 md:mx-2 max-w-lg p-8 space-y-3 rounded-xl shadow-xl shadow-violet-800 textColor purple">
+<div className='grid justify-center bg-gray-500 py-5 violetColor'>
+<div className="w-full max-w-md p-8 space-y-3 rounded-xl shadow-xl shadow-violet-800 textColor purple">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
 	<form onSubmit={handleSubmit} novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
 		<div className="space-y-1 text-sm">
-			<label for="username" className="block  ">Email</label>
+			<label for="username" className="block">Email</label>
 			<input type="text" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md focus:border-violet-400 text-black" />
 		</div>
 		<div className="space-y-1 text-sm">
-			<label for="password" className="block  ">Password</label>
+			<label for="password" className="block">Password</label>
 			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md focus:border-violet-400 text-black" />
 			<div className="flex justify-end text-xs  ">
 				<Link rel="noopener noreferrer" href="#">Forgot Password?</Link>
 			</div>
 		</div>
-		<button className="block w-full p-3 text-center rounded-sm   ">Sign in</button>
+		<button className="block w-full p-3 text-center rounded-sm">Sign in</button>
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16 bg-gray-800"></div>

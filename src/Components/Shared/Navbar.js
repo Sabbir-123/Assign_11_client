@@ -50,8 +50,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar  pt-2 pb-4 purple textColor">
-      <div className="navbar-start">
+    <div className="navbar pt-2 pb-4 purple textColor">
+      <div className="navbar-start ">
         <div className="dropdown ">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -78,7 +78,7 @@ const Navbar = () => {
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="w-12 h-10 rounded" src={logo} alt="" />
-          <h1 className="px-2">Raihan's Delivery</h1>
+          <h1 className="px-1">Raihan's Delivery</h1>
         </Link>
       </div>
       <div className="navbar-end ">

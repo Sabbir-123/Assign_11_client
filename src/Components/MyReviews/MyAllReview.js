@@ -4,15 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 import MyAllReviewDetails from './MyAllReviewDetails';
 
 const MyAllReview = () => {
-    // const [reviews, setReviews] = useState([]);
-
-    // useEffect(()=>{
-    //     fetch(`https://loserver.vercel.app/reviews`)
-    //     .then(res => res.json())
-    // .then(data => {setReviews(data)
-    // })
-        
-    // }, [])
+   
 
     const {data: reviews = [], refetch}= useQuery({
         queryKey: ['reviews'],
@@ -29,7 +21,7 @@ const MyAllReview = () => {
             <h1 className='text-4xl'>My All Review</h1>
             <section className="   ">
 	{
-        reviews.map(allreview => <MyAllReviewDetails key={allreview._id} allreview={allreview} refetch={refetch}></MyAllReviewDetails>)
+        reviews?.map(allreview => <MyAllReviewDetails key={allreview._id} allreview={allreview} refetch={refetch}></MyAllReviewDetails>)
     }
 </section>
         </div>
