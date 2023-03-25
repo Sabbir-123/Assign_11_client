@@ -8,7 +8,7 @@ const UpdateReview = () => {
     const { user } = useContext(AuthContext);
     const router = useParams()
     const {id}= router;
-//  const [refresh, setRefresh]= useState(false);
+
 const navigate= useNavigate()
 
     const {data: review = {}, refetch, isLoading}= useQuery({
