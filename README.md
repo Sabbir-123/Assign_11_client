@@ -11,6 +11,7 @@
 * Registered User Can review a service 
 * Register User can see all his/her review in one place
 * Registered user can update and delete his/her review
-* Admin can update and delete review 
+* Admin can view, update and delete all user's reviews 
+
 
  
