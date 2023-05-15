@@ -38,7 +38,7 @@ const CardDetails = () => {
       <div className="mx-auto">
         <div className="grid lg:flex">
             <div className="mx-auto">
-                 {user?.displayName ? 
+                 {user?.email ? 
                  <>
                   <AddReviews serviceDetails={serviceDetails} reviews={reviews} setReviews={setReviews}></AddReviews>
                  </>

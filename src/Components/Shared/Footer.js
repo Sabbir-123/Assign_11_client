@@ -4,11 +4,11 @@ import React from 'react';
 const Footer = () => {
     return (
 		<div className='purple textColor'>
-		<footer className="footer p-10  ">
+		{/* <footer className="footer p-10  ">
    <div className='lg:ml-36'>
    <div className='App'>
-   <h1 className='text-[28px] leading-8	'>Raihan's Delivery</h1> 
- <h1 className='mt-1 leading-10	'>Your Trusted Delivery Partner</h1>
+   <h1 className='text-[28px] leading-8	'>Service Critic</h1> 
+ <h1 className='mt-1 leading-10	'>Your Trusted Review Partner</h1>
    </div>
   <div className='lg:mt-12 mt-5 md:mt-9'>
   <div className='flex mb-4'>
@@ -50,7 +50,7 @@ const Footer = () => {
 	 <p className="link link-hover text-[16px] lg:mt-7">Terms of Services</p>
    </div> 
  
- </footer>
+ </footer> */}
  <div>
  <p className='text-[16px] pb-6 font-normal text-center'>All Rights Rreserved</p>
  </div>

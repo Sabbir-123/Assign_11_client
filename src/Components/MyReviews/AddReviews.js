@@ -10,12 +10,14 @@ const AddReviews = ({serviceDetails, setReviews, reviews}) => {
     e.preventDefault();
     const reviewUser = user?.displayName;
     const reviewerImage = user?.photoURL;
+    const email = user?.email;
     const review = {
       title: serviceDetails?.title,
       details: e.target.details.value,
       serviceID : e.target.serviceID.value,
       reviewUser,
       reviewerImage,
+      email,
     };
 
     fetch("https://loserver.vercel.app/addreviews", {

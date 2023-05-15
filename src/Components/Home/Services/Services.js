@@ -14,8 +14,8 @@ const Services = () => {
             <section className="py-6 sm:py-12 violetColor text-white   ">
 	<div className="container p-6 mx-auto space-y-8 ">
 		<div className="space-y-2 text-center ">
-			<h2 className="text-3xl font-bold text-white">Our Services</h2>
-			<p className="font-serif text-sm  text-white ">What We Provide?</p>
+			<h2 className="text-3xl font-bold text-white">Services</h2>
+			<p className="font-serif text-sm  text-white ">What You can Review?</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
 			{

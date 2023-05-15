@@ -5,10 +5,10 @@ const Team = () => {
         <div className="px-4 textColor py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
           <p className="inline-block px-3 py-px mb-4 text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-            Our Delivery Team
+            Our Expert Team
           </p>
           <p className="text-base   md:text-lg">
-          "Meet the Dedicated Team Behind Our Fast and Reliable Delivery Service: Experts in Logistics and Customer Service!"
+          "Meet the Dedicated Team Behind Our Fast, Reliable and Trust Worthy Reviewer Verification Team: Experts in Logistics and Customer Service!"
           </p>
         </div>
         <div className="grid gap-10 mx-auto lg:max-w-screen-lg sm:grid-cols-2 lg:grid-cols-4">

@@ -9,14 +9,14 @@ const SliderItem = ({slide}) => {
                     <img src={image} alt="" className="w-full rounded-xl" />
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
-                    <h1 className='lg:text-6xl font-bold text-white md:text-4xl sm:text-2xl'>
-                       Delivery 
-                        Solution <br />
+                    <h1 className='lg:text-6xl font-bold secondaryColor md:text-4xl sm:text-2xl'>
+                       Service's
+                        Reviews <br />
                         in One Place
                     </h1>
                 </div>
                 <div className="absolute justify-end transform -translate-y-1/2 w-2/5 left-20 top-1/2  hidden lg:block  ">
-                    <p  className='lg:text-5xl sm:text-xl md:text-3xl text-white md:hidden sm:hidden lg:block '>Parcel Delivered <br /> On Time with <br /> no Hassle</p>
+                    <p  className='lg:text-5xl sm:text-xl md:text-3xl text-black md:hidden sm:hidden lg:block '>Honest Review with <br /> Community Engagement</p>
                 </div>
                 <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
                     <Link to={'/login'}>

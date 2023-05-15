@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import swal from "sweetalert";
 import logo from "../../Assets/logo.png";
 import { AuthContext } from "../../Constexts/AuthpProvider";
+import useAdmin from "../../Routes/UseAdmin";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-
+  const [isAdmin] =useAdmin(user?.email)
   const handleLogout = () => {
     logout()
       .then(swal("User Logged Out"))
@@ -23,9 +24,16 @@ const Navbar = () => {
           <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/addservices">Add Services</Link>
           </li>
-          <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
-            <Link to="/myallreviews">My Reviews</Link>
+          {
+            isAdmin ? <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
+            <Link to="/allreviews">All Reviews</Link>
+          </li> 
+            :
+              <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
+            <Link to="/myallreviews">View Reviews</Link>
           </li>
+          }
+         
           <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl" onClick={handleLogout}>
             <Link>Log Out</Link>
           </li>
@@ -38,15 +46,18 @@ const Navbar = () => {
           <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
             <Link to="/login">Login</Link>
           </li>
+         
         </>
+
       )}
 
-      <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
+      {/* <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
         <Link to="/blogs">Blogs</Link>
-      </li>
+      </li> */}
       <li className="font-semibold hover:bg-cyan-400 hover:text-black hover:rounded-xl">
         <Link to="/contacts">Contacts</Link>
       </li>
+      
     </>
   );
   return (
@@ -78,7 +89,7 @@ const Navbar = () => {
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           <img className="w-12 h-10 rounded" src={logo} alt="" />
-          <h1 className="px-1">Raihan's Delivery</h1>
+          <h1 className="px-1"> Service Critic</h1>
         </Link>
       </div>
       <div className="navbar-end ">

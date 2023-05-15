@@ -2,9 +2,11 @@ import AddService from "../Components/AddService/AddService";
 import Contact from "../Components/Home/Contact/Contact";
 import CardDetails from "../Components/Home/Services/CardDetails";
 import Services from "../Components/Home/Services/Services";
+import AdminReview from "../Components/MyReviews/AdminReview";
 import MyAllReview from "../Components/MyReviews/MyAllReview";
 import UpdateReview from "../Components/MyReviews/UpdateReview";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import AdminRoute from "./AdminRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Blogs } = require("../Components/Blogs/Blogs");
@@ -59,9 +61,12 @@ const router = createBrowserRouter ([
                 element: <PrivateRoute><MyAllReview></MyAllReview></PrivateRoute>,
             },
             {
+                path:'/allreviews',
+                element: <AdminRoute><AdminReview></AdminReview></AdminRoute>,
+            },
+            {
                 path:'/update/:id',
                 element: <UpdateReview></UpdateReview>,
-                // loader: ({params})=>fetch(`https://loserver.vercel.app/reviews/${params.id}`)
             }
         ]
     }

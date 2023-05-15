@@ -14,7 +14,7 @@ const navigate= useNavigate()
     const {data: review = {}, refetch, isLoading}= useQuery({
         queryKey: ['reviews'],
         queryFn: async()=>{
-            const res = await fetch(`https://loserver.vercel.app/reviews/${id}`)
+            const res = await fetch(`https://loserver.vercel.app/myeditedreviews/${id}`)
             const data = await res.json()
             return data
         }
@@ -30,7 +30,7 @@ const singleReview = {
     details:  e.target.details.value,
 }
 
-await fetch(`https://loserver.vercel.app/reviews/edit/${id}`, {
+await fetch(`https://loserver.vercel.app/updatereviews/edit/${id}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json',
@@ -40,9 +40,7 @@ await fetch(`https://loserver.vercel.app/reviews/edit/${id}`, {
     .then(data=>{
         if(data.success){
             swal(data?.message);
-            if(isLoading){
-                navigate('/myallreviews')
-            }
+            navigate('/')
             
         }else{
             swal(data?.error)
@@ -52,7 +50,11 @@ await fetch(`https://loserver.vercel.app/reviews/edit/${id}`, {
 
 console.log(singleReview)
 }
-
+if(isLoading){
+  return (
+    <p>Loading</p>
+  )
+}
     return (
         <div className="px-5 purple">
         <section className="p-10  rounded-2xl ">

@@ -17,16 +17,34 @@ const Register = () => {
         event.preventDefault();
     const form = event.target;
     const name = form.name.value;
-    const photoURL = form.photoURL.value;
+    // const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
+const users = {
+  name,
+  email,
+  password
+}
 
-    createUser(email, password)
-      .then((result) => {
-        navigate('/')
-        form.reset();
-      })
-      .catch((error) => console.log(error));
+    fetch("https://loserver.vercel.app/register", {
+		  method: "POST",
+		  headers: {
+			"content-type": "application/json"
+		  },
+		  body: JSON.stringify(users)
+		}).then(res => res.json())
+		.then(data => {
+			console.log(data)
+    
+      if(data.acknowledged){
+        createUser(email, password)
+        .then((result) => {
+          navigate('/')
+          form.reset();
+        })
+        .catch((error) => console.log(error));
+
+      }})
  
     }
     
@@ -70,7 +88,7 @@ const Register = () => {
                   data-temp-mail-org="0"
                 />
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="photoURL" className="block mb-2 text-sm">
                   Photo URL
                 </label>
@@ -82,7 +100,7 @@ const Register = () => {
                   className="w-full px-3 text-black py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200  "
                   data-temp-mail-org="0"
                 />
-              </div>
+              </div> */}
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm">
                   Email address
