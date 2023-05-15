@@ -6,9 +6,11 @@
 * Review System of Services. It's very necessary for the ecommerce and f-commerce now-a-days 
 
 * Best Features of Service Critic are:
-* User can Add Service
-* User Can review a service 
-* Non Registered User can view review 
-* Admin can update and delete review 
+* Non Registered User can view Services details and Reviews 
+* Registered User can Add Service
+* Registered User Can review a service 
+* Register User can see all his/her review in one place
 * Registered user can update and delete his/her review
+* Admin can update and delete review 
+
  
