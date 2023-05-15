@@ -11,7 +11,17 @@
 * Registered User Can review a service 
 * Register User can see all his/her review in one place
 * Registered user can update and delete his/her review
+* Admin also can add services, review a services
 * Admin can view, update and delete all user's reviews 
+
+
+# Admin Details
+```
+Email: service.critic@gmail.com
+Pass: 123456
+```
+
+
 
 
  
