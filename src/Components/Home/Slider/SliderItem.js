@@ -10,7 +10,7 @@ const SliderItem = ({slide}) => {
                 </div>
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
                     <h1 className='lg:text-6xl font-bold secondaryColor md:text-4xl sm:text-2xl'>
-                       Service's
+                       Service
                         Reviews <br />
                         in One Place
                     </h1>

@@ -8,7 +8,7 @@ const Team = () => {
             Our Expert Team
           </p>
           <p className="text-base   md:text-lg">
-          "Meet the Dedicated Team Behind Our Fast, Reliable and Trust Worthy Reviewer Verification Team: Experts in Logistics and Customer Service!"
+          "Meet the Dedicated Team Behind Our Fast, Reliable and Trust Worthy Review Verification"
           </p>
         </div>
         <div className="grid gap-10 mx-auto lg:max-w-screen-lg sm:grid-cols-2 lg:grid-cols-4">
